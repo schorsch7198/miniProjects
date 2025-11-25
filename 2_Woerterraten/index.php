@@ -1,15 +1,7 @@
-<?php
+<?php 
 include 'functions.php';
-
-// Initialize 
-$appState = initializeApp();
-
-// Process form actions
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $appState = processAppAction($appState);
-}
+$appState = runApp();
 ?>
-
 
 <!DOCTYPE html>
 <html lang="de">
