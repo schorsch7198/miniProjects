@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Validation Test Page with Errors</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .error-section {
+            background: #fff5f5;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        .valid-section {
+            background: #f0fff0;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        code {
+            background: #f8f8f8;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        .error-message {
+            color: #c0392b;
+            font-weight: bold;
+        }
+        .success-message {
+            color: #27ae60;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>HTML Validation Test Page</h1>
+        <p>This page contains intentional HTML errors to demonstrate validation issues.</p>
+        
+        <div class="error-section">
+            <h2>Section with Errors</h2>
+            
+            <h3>1. Missing closing tag</h3>
+            <p>This paragraph is missing its closing tag
+            <p>This is the next paragraph</p>
+            
+            <h3>2. Unclosed elements</h3>
+            <p><strong>This text is bold but the strong tag is never closed
+            <p>This paragraph continues with the strong tag still open</p>
+            
+            <h3>3. Incorrect nesting</h3>
+            <p><strong><em>This text is both bold and italic</strong></em></p>
+            
+            <h3>4. Missing required attributes</h3>
+            <img src="image.jpg">
+            
+            <h3>5. Deprecated attribute</h3>
+            <p align="center">This uses deprecated align attribute</p>
+            
+            <h3>6. Invalid attribute value</h3>
+            <input type="text" size="abc">
+            
+            <h3>7. Duplicate ID</h3>
+            <div id="header">First element with ID "header"</div>
+            <div id="header">Second element with ID "header"</div>
+            
+            <h3>8. Missing quotes in attributes</h3>
+            <a href=https://example.com>Link without quotes</a>
+            
+            <h3>9. Special character issues</h3>
+            <p>This uses special characters directly: < > & </p>
+            
+            <h3>10. Block element inside inline element</h3>
+            <span><div>This div is inside a span</div></span>
+        </div>
+        
+        <div class="valid-section">
+            <h2>Section with Valid HTML</h2>
+            
+            <h3>1. Properly closed tags</h3>
+            <p>This paragraph has a proper closing tag.</p>
+
+            <h3>2. Closed elements</h3>
+            <p><strong>This text is bold but the strong tag is never closed</strong></p>
+            <p>This paragraph continues with the strong tag still open</p>
+            
+            <h3>3. Correct nesting</h3>
+            <p><strong><em>This text is both bold and italic</em></strong></p>
+            
+            <h3>4. Complete attributes</h3>
+            <img src="image.jpg" alt="Description of image">
+            
+            <h3>5. Modern CSS instead of deprecated attributes</h3>
+            <p style="text-align: center;">This uses CSS for alignment</p>
+            
+            <h3>6. Valid attribute values</h3>
+            <input type="text" size="20">
+            
+            <h3>7. Unique IDs</h3>
+            <div id="header1">First header</div>
+            <div id="header2">Second header</div>
+            
+            <h3>8. Properly quoted attributes</h3>
+            <a href="https://example.com">Link with quotes</a>
+            
+            <h3>9. Properly encoded special characters</h3>
+            <p>This uses encoded special characters: &lt; &gt; &amp;</p>
+            
+            <h3>10. Correct element hierarchy</h3>
+            <div><span>This span is inside a div</span></div>
+        </div>
+        
+        <div class="error-section">
+            <h2>More Complex Errors</h2>
+            
+            <h3>11. Table structure errors</h3>
+            <table>
+                <td>Cell without row</td>
+                <tr>
+                    <th>Header without table head
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2
+                </tr>
+            </table>
+            
+            <h3>12. List errors</h3>
+            <ul>
+                <li>Item 1
+                <li>Item 2</li>
+                <p>Paragraph inside list</p>
+            </ul>
+            
+            <h3>13. Form errors</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name">
+                <input type="submit">
+            </form>
+        </div>
+        
+        <div class="valid-section">
+            <h2>Corrected Versions</h2>
+            
+            <h3>11. Proper table structure</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cell 1</td>
+                        <td>Cell 2</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>12.Proper list structure</h3>
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+
+            <form method="post" action="/submit">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <input type="submit" value="Submit">
+            </form>
+
+        </div>
+        
+        <div style="margin-top: 30px; padding: 15px; background: #e8f4fd; border-radius: 5px;">
+            <h3>How to Validate This Page</h3>
+            <ol>
+                <li>Copy this entire HTML code</li>
+                <li>Go to <a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a></li>
+                <li>Select the "Validate by Direct Input" tab</li>
+                <li>Paste the code and click "Check"</li>
+                <li>Review the errors and warnings</li>
+            </ol>
+            <p class="error-message">Expected: Multiple errors including unclosed elements, improper nesting, and missing attributes</p>
+        </div>
+    </div>
+</body>
+</html>
