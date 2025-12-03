@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q1 - CSS Positioning</title>
+    <style>
+        /* Container for centering all squares */
+        .container {
+            position: absolute;
+            width: 420px;
+            height: 420px;
+            left: 50%;
+            top: 50%;
+            margin-left: -210px; /* Half of width (420/2) */
+            margin-top: -210px;  /* Half of height (420/2) */
+        }
+        
+        /* Square base styling - only allowed attributes */
+        .square {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            background-color: gray;
+            border: 1px solid black;
+        }
+        
+        /* Individual square positioning - top left */
+        #square1 {
+            background-color: #004aaa;
+            left: 0;
+            top: 0;
+        }
+        
+        /* Top right */
+        #square2 {
+            background-color: #f8ff9d;
+            left: 220px; /* 200px + 20px gap */
+            top: 0;
+        }
+        
+        /* Bottom left */
+        #square3 {
+            background-color: #10ff08;
+            left: 0;
+            top: 220px;
+        }
+        
+        /* Bottom right */
+        #square4 {
+            background-color: #c517c5;
+            left: 220px;
+            top: 220px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="square" id="square1"></div>
+        <div class="square" id="square2"></div>
+        <div class="square" id="square3"></div>
+        <div class="square" id="square4"></div>
+    </div>
+    
+    <div style="position: fixed; bottom: 10px; left: 10px;">
+        Georg Steiner, 2025-12-03 16:30, FERTIG
+    </div>
+</body>
+</html>
