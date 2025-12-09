@@ -1,0 +1,172 @@
+/* general body style */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
+
+/* keyboard display style */
+.keyboard {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* format style */
+.function-key-section { margin-bottom: 20px; }
+.main-section { display: flex; gap: 5px; } 
+
+/* seperate background formats for main section */
+.main-keys,
+.navigation,
+.numeric-keypad {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* key row styles */
+.function-key-row {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+.key-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.navigation { width: 170px; }
+.numeric-keypad { width: 230px; }
+
+
+/* titles style */
+.key-group-title {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* normed size key */
+.key {
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 15px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    flex-shrink: 0;
+}
+.key:hover {
+    background-color: #666;
+}
+
+/* special sized keys */
+.shut-down-key {
+    width: 63px;
+    background-color: #b22222;
+    pointer-events: none;
+}
+.caret-key { width: 35px; }
+.left-tab-key {
+    width: 70px;
+    justify-content: flex-start;
+}
+.right-tab-key {
+    width: 100px;
+    justify-content: flex-end;
+}
+.caps-key { width: 85px; justify-content: flex-start; }
+.left-shift-key {
+    width: 58px;
+    margin-right: -8px;
+    justify-content: flex-start;
+}
+.right-shift-key { width: 146px; justify-content: flex-end; }
+.space-key { width: 290px; }
+.ctrl-key,
+.alt-key { width: 65px; }
+.lock-key {
+    width: 56px;
+    background-color: #292929;
+    pointer-events: none;
+}
+.blank-key {
+    width: 50px;
+    background-color: transparent;
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+}
+.plus-key {
+    width: 50px;
+    height: 105px;
+    position: absolute;
+    right: 10px;
+}
+.zero-key { width: 110px; }
+.num-enter-key {
+    width: 50px;
+    height: 105px;
+    position: absolute;
+    right: 10px;
+    bottom: 15px;
+}
+
+/* for keys with multiple characters */
+.multi-char-key { 
+    position: relative; 
+    padding: 5px;
+}
+.multi-char-key .top-left {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 10px;
+}
+.multi-char-key .center { font-size: 14px; }
+.multi-char-key .bottom-right {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 10px;
+}
+
+/* special "enter"-key with function (in html file located) */
+.enter-key { width: 65px; }
+.true-enter-key {
+    width: 50px;
+    height: 105px;
+    position: absolute;
+    right: 10px;
+    top: 94px;
+}
+.enter-key:hover,
+.true-enter-key:hover,
+.enter-key:hover ~ .true-enter-key,
+.true-enter-key:hover ~ * .enter-key { background-color: #666; }
+.enter-key:hover ~ * .true-enter-key,
+.true-enter-key:hover + * .enter-key { background-color: #666; }
+
+/* for timestamp */
+.info {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 15px;
+    color: #333;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q3 - Big Square with 2 Corner Squares crossing</title>
+    <style>
+        /* Centering container */
+        .container {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px;
+            margin-top: -200px;
+        }
+
+        /* Big square */
+        .big-square {
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            position: relative; /* relative to the container instead of entire page */
+        }
+
+        /* All small squares */
+        .small-square {
+            width: 200px;
+            height: 200px;
+            border: 1px solid grey;
+            position: absolute; /* relative to the nearest positioned ancestor (.big-square) */
+        }
+
+        /* Corner positions */
+        .top-left { left: 20px; top: 20px; }
+        .bottom-right { right: 20px; bottom: 20px; }
+
+       .info {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="big-square">
+            <div class="small-square top-left"></div>
+            <div class="small-square bottom-right"></div>
+        </div>
+    </div>
+
+    <div class="info">
+        Georg Steiner, 2025-12-05 19:00 (1h), FERTIG
+    </div>
+</body>
+</html>
