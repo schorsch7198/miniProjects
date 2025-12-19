@@ -43,7 +43,7 @@ The repository contains the following directories:
 - **AoC25/** - Advent of Code 2025 solutions
 - **CSS/** - CSS projects and examples
 - **HTML/** - HTML projects and tasks
-- **first_Projects/** - Initial projects including various Python programs
+- **first_Projects/** - Initial learning projects with various programming exercises
 
 ## Getting Started
 
