@@ -3,8 +3,18 @@
 #define DIAL_SIZE 100
 #define START_POSITION 50
 
+/* Count zeros if dial points at 0 (IMPORTANT: counts new positions at 0) */
+int count_zero(int pos, int zeros)
+{
+    if (pos == 0)
+    {
+        zeros++;
+    }
+    return zeros;
+}
+
 /* Rotate dial and return new position */
-int rotate_dial(int pos, char dir, int dis)// pos: position | dir: direction - 'L' or 'R' | dis: distance - steps to move
+int rotate_dial(int pos, char dir, int dis) // pos: position | dir: direction - 'L' or 'R' | dis: distance - steps to move
 {
     if (dir == 'R')
     {
@@ -19,16 +29,6 @@ int rotate_dial(int pos, char dir, int dis)// pos: position | dir: direction - '
         }
     }
     return pos;
-}
-
-/* count zeros if dial points at 0 (IMPORTANT: counts new positions at 0) */
-int count_zero(int pos, int zeros)
-{
-    if (pos == 0)
-    {
-        zeros++;
-    }
-    return zeros;
 }
 
 int main(void)
@@ -49,13 +49,14 @@ int main(void)
             pos = rotate_dial(pos, dir, dis);
             zeros = count_zero(pos, zeros);
         }
-        if(line[0] == '\n') // Break on empty line
+        if (line[0] == '\n') // Break on empty line
         {
             break;
         }
     }
 
-    printf("Final Dial Position: %d\nNumber of Zeros (Password): %d\n\n", pos, zeros);
+    printf("Final Dial Position: %d\n", pos);
+    printf("Number of Zeros (Password): %d\n\n", zeros);
     return 0;
 }
 
