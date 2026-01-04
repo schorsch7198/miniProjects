@@ -62,3 +62,30 @@ int main(void)
 
 // Compiling Command: gcc dial_safe.c -o safe.exe
 // Running Command: safe.exe   "or"   ./safe.exe
+
+/*
+    // 'Old' version in PHP (from Mr.Grösswang)
+    $lPos   = $lPos + $lNr;
+    if ($lPos == 0) 
+    {
+        // echo "(0)";  // 0 erreicht
+        $lResult++;
+    }
+    else if ($lPos >= 100)    
+    {
+        // echo "(+)"; // positiver überlauf
+        $lResult   += intdiv(abs($lPos),100);
+    }
+    else if ($lPos <= -100)    
+    {
+        // echo "(-)"; // negativer Überlauf
+        $lResult   += ($lOld == 0 ? 0 : 1) + intdiv(abs($lPos),100);
+    }
+    else if (($lOld>0 && $lPos < 0) || ($lOld<0 && $lPos>0)    )
+    {
+        // echo "(x)";  // Vorzeichenwechsel (ohne 0)
+        $lResult++;
+    }
+    $lPos       = $lPos % 100;
+    if ($lPos<0) $lPos += 100;
+*/
